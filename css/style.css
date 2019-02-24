@@ -1,0 +1,117 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    top: 0;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+}
+
+#logo {
+    float: left;
+    height: 50px;
+    margin: 10px 5px;
+}
+
+nav {
+    float: right;
+    margin-right: 15px;
+}
+
+nav li {
+    display: inline; 
+    text-decoration: underline;
+    margin: 5px;
+}
+
+.mission, .featured, .locations, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission, .locations {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.flex-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mission {
+    background-image: url("../pics/img-mission-background.jpg");
+    flex-direction: row;
+    height: 700px;
+}
+
+.mission .description {
+    width: 1200px;
+    background-color: black;
+}
+
+.mission .description h2, h4{
+    margin: 15px 0;
+}
+
+.featured .flex-parent{
+    max-width: 1000px;
+}
+
+.featured .flex-parent .flex-child img{
+    height: 200px;
+    width: 300px;
+    margin: 15px;
+}
+
+.locations {
+    background-image: url("../pics/img-locations-background.jpg");
+    min-height: 500px;
+}
+
+.locations .flex-parent .flex-child{
+    width: 300px;
+    margin: 15px 20px;
+    background-color: black;
+    opacity: 1;
+}
+
+footer{
+    min-width: 200px;
+}
+
+.copyright {
+    text-align: left;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 565px) {
+    body, header {
+        min-width: 375px;
+    }
+    header {
+        height: 90px;
+    }
+
+    nav ul {
+        margin: 5px;
+        padding: 0;
+    }
+
+    nav li {
+        display: block; 
+    }
+}
